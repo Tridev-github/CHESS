@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHESS</title>
+
+    <script src="template-for-boxes-new.js"></script>
+<!--<script src="template-for-boxes.js"></script> -->
+    <script src="template-for-pieces.js"></script>
+    <script src="is-game-over.js"></script>
+    <script src="move-piece-link.js"></script>
+    <script src="white-elephant-available-moves.js"></script>
+    <script src="black-elephant-available-moves.js"></script>
+    <script src="white-bishop-available-moves.js"></script>
+    <script src="black-bishop-available-moves.js"></script>
+    <script src="white-soldier-available-moves.js"></script>
+    <script src="black-soldier-available-moves.js"></script>
+    <script src="white-horse-available-moves.js"></script>
+    <script src="black-horse-available-moves.js"></script>
+    <script src="white-king-available-moves.js"></script>
+    <script src="black-king-available-moves.js"></script>
+    <script src="white-minister-available-moves.js"></script>
+    <script src="black-minister-available-moves.js"></script>
+    <link rel="stylesheet" href="box-width.css">
+
+</head>
+
+<body>
+<section>
+    <table style="border:1px solid black;border-collapse: collapse;" >
+        <tr>
+            <td class="useless"></td>
+            <td class="useless">A</td>
+            <td class="useless">B</td>
+            <td class="useless">C</td>
+            <td class="useless">D</td>
+            <td class="useless">E</td>
+            <td class="useless">F</td>
+            <td class="useless">G</td>
+            <td class="useless">H</td>
+        </tr>
+
+        <tr>
+            <td class="useless">1</td>
+            <td>
+                <button data-xcoord="0" data-ycoord="0" data-piece="white-ele" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="0" data-ycoord="1" data-piece="white-hor" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="0" data-ycoord="2" data-piece="white-bis" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="0" data-ycoord="3" data-piece="white-min" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="0" data-ycoord="4" data-piece="white-kin" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="0" data-ycoord="5" data-piece="white-bis" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="0" data-ycoord="6" data-piece="white-hor" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="0" data-ycoord="7" data-piece="white-ele" onclick="cal_move(this)">
+
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="useless">2</td>
+            <td>
+                <button data-xcoord="1" data-ycoord="0" data-piece="white-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="1" data-ycoord="1" data-piece="white-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="1" data-ycoord="2" data-piece="white-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="1" data-ycoord="3" data-piece="white-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="1" data-ycoord="4" data-piece="white-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="1" data-ycoord="5" data-piece="white-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="1" data-ycoord="6" data-piece="white-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="1" data-ycoord="7" data-piece="white-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="useless">3</td>
+            <td>
+                <button data-xcoord="2" data-ycoord="0" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="2" data-ycoord="1" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="2" data-ycoord="2" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="2" data-ycoord="3" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button id="track" data-xcoord="2" data-ycoord="4" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="2" data-ycoord="5" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="2" data-ycoord="6" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="2" data-ycoord="7" onclick="cal_move(this)">
+
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="useless">4</td>
+            <td>
+                <button data-xcoord="3" data-ycoord="0" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="3" data-ycoord="1" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="3" data-ycoord="2" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="3" data-ycoord="3" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="3" data-ycoord="4" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="3" data-ycoord="5" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="3" data-ycoord="6" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="3" data-ycoord="7" onclick="cal_move(this)">
+
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="useless">5</td>
+            <td>
+                <button data-xcoord="4" data-ycoord="0" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="4" data-ycoord="1" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="4" data-ycoord="2" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="4" data-ycoord="3" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="4" data-ycoord="4" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="4" data-ycoord="5" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="4" data-ycoord="6" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="4" data-ycoord="7" onclick="cal_move(this)">
+
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="useless">6</td>
+            <td>
+                <button data-xcoord="5" data-ycoord="0" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="5" data-ycoord="1" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="5" data-ycoord="2" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="5" data-ycoord="3" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="5" data-ycoord="4" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="5" data-ycoord="5" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="5" data-ycoord="6" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="5" data-ycoord="7" onclick="cal_move(this)">
+
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="useless">7</td>
+            <td>
+                <button data-xcoord="6" data-ycoord="0" data-piece="black-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="6" data-ycoord="1" data-piece="black-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="6" data-ycoord="2" data-piece="black-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="6" data-ycoord="3" data-piece="black-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="6" data-ycoord="4" data-piece="black-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="6" data-ycoord="5" data-piece="black-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="6" data-ycoord="6" data-piece="black-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="6" data-ycoord="7" data-piece="black-sol" onclick="cal_move(this)">
+
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="useless">8</td>
+            <td>
+                <button data-xcoord="7" data-ycoord="0" data-piece="black-ele" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="7" data-ycoord="1" data-piece="black-hor" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="7" data-ycoord="2" data-piece="black-bis" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="7" data-ycoord="3" data-piece="black-min" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="7" data-ycoord="4" data-piece="black-kin" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="7" data-ycoord="5" data-piece="black-bis" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="7" data-ycoord="6" data-piece="black-hor" onclick="cal_move(this)">
+
+                </button>
+            </td>
+            <td>
+                <button data-xcoord="7" data-ycoord="7" data-piece="black-ele" onclick="cal_move(this)">
+
+                </button>
+            </td>
+        </tr>
+
+    </table>
+</section>
+
+<article>
+
+</article>
+
+<aside>
+    <h1>Player win list</h1>
+    <ul id="win_label"></ul>
+</aside>
+</body>
+</html>

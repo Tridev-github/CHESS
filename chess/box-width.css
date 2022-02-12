@@ -1,0 +1,54 @@
+        td{
+            margin: 2px;
+            border:1px solid black;
+            width: 70px;
+            height: 70px;
+        }
+
+        td>button{
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        td>button:focus{
+            background-color: lawngreen;
+        }
+
+        button:hover{
+            background-color: dodgerblue;
+        }
+
+
+        button:disabled{
+            background-color: gainsboro ;
+        }
+
+        button:enabled{
+            background-color: lawngreen;
+        }
+
+        aside{
+            background-color: #607d8b99;
+            width: 20%;
+            position: absolute;
+            left: 80%;
+            height: 660px;
+        }
+        section{
+            background-color: cornflowerblue;
+            filter: brightness(93%);
+            width: 40%;
+            position: absolute;
+            height: 660px;
+        }
+
+        h1{
+            margin: 10px;
+        }
+
+
+
+
+
+
